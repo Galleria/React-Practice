@@ -1,0 +1,7 @@
+.container:after{
+  clear:none;
+}
+
+.searchForm{
+  margin-right: 5px;
+}
