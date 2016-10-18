@@ -14,8 +14,8 @@ const Header = React.createClass({
     render: function () {
         //console.log( styles );
         return (
-            <Navbar>
-                <Navbar.Header >
+            <Navbar staticTop>
+                <Navbar.Header>
                 <Navbar.Brand>
                    <NavLink to='/'> Title_Menu </NavLink>
                 </Navbar.Brand>
@@ -54,7 +54,7 @@ const Header = React.createClass({
                 </Nav>
                 </Navbar.Collapse>
                 <Navbar.Form pullRight className={styles.searchForm}>
-                    <FormGroup>
+                    <FormGroup className={styles.searchMenu}>
                         <FormControl type="text" placeholder="Search" />
                     </FormGroup>
                     {' '}
