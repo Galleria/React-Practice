@@ -26,7 +26,33 @@ export default React.createClass({
           <Row>
             {cols}
           </Row>
-
+          <br/>
+          <Row>
+            <Col xs={12} sm={4} md={4} lg={4}>
+              <fieldset className="wells">
+                <legend>Title</legend>
+                <div>
+                  News
+                </div>
+              </fieldset>
+            </Col>
+            <Col xs={12} sm={4} md={4} lg={4}>
+              <fieldset className="wells">
+                <legend>Title</legend>
+                <div>
+                  Hots
+                </div>
+              </fieldset>
+            </Col>
+            <Col xs={12} sm={4} md={4} lg={4}>
+              <fieldset>
+                <legend>Title</legend>
+                <div>
+                  Etcs
+                </div>
+              </fieldset>
+            </Col>
+          </Row>
         </Grid>
       </div>
     )
@@ -34,10 +60,19 @@ export default React.createClass({
 
   renderCard(){
     let cards = [];
-    for( let idx=0 ; idx<9 ; idx++ )
+    for( let idx=0 ; idx<9 ; idx++ ){
+      let label = this.randomLabel();
       cards.push( <Col xs={6} sm={4} md={4} lg={4} className={style.col} key={idx}>
-              <Image src="./src/images/thumbnail.png" rounded />
-            </Col> );
+            <Image src="./src/images/thumbnail.png" rounded />
+            {label}
+          </Col> );
+    }
     return cards;
+  },
+
+  randomLabel(){
+    let label = ['','info','danger','success'];
+    let random = Math.floor( (Math.random() * label.length) );
+    return (random==0) ? '' : (<Label bsStyle={label[random]} className={style.label_layout} >{label[random].toUpperCase()}</Label>);
   }
 })

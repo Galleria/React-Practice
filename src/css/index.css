@@ -1,3 +1,17 @@
 body {
   text-align: center;
 }
+
+legend{
+  padding: 5px;
+  vertical-align: middle;
+  background-color: beige;
+  border-top:1px solid chocolate;
+  border:1px solid chocolate;
+  width:100.5%;
+}
+
+.wells, .well , fieldset{
+  padding: 0px;
+  border:1px solid chocolate;
+}

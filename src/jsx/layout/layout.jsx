@@ -5,7 +5,7 @@ import Footer from '../component/Footer.jsx'
 const Main = React.createClass({
 
   render: function () {
-      let contents = {'margin-bottom' : '80px'};
+      let contents = { marginBottom : '80px'};
 
       return (
           <div>
